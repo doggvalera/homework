@@ -30,6 +30,8 @@ public class Controller {
     @FXML
     private TextArea smalTransactArea;
     @FXML
+    private Label allExpense;
+    @FXML
     private Label averageLabel;
     @FXML
     public void onButtonUserAddClicked() {
@@ -89,6 +91,7 @@ public class Controller {
             expenseAddLabel.setText("\t\n" + "You have empty field");
         }
         System.out.println(Main.getUsers().toString());
+        allExpense.setText(Main.findAllExpense().toString());
         initialize();
     }
 
