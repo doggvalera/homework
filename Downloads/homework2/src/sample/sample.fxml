@@ -1,0 +1,51 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+
+
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3">
+        <HBox>
+            <TextField text="Enter name of Address book" fx:id="addressBookNameField"/>
+        </HBox>
+        <!--<HBox> <ListView fx:id="personList"/> </HBox>-->
+        <ListView fx:id="personList"></ListView>
+    </VBox>
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="4">
+
+        <TextField text="Enter name" fx:id="firstNameTextField"/>
+        <TextField text="Enter Surname" fx:id="lastNameTextField"/>
+        <TextField text="Find Name" fx:id="findNameField"/>
+        <Label fx:id="findNameLabel"/>
+        <Label text="Add Entry Type"></Label>
+        <TextField text="Find Name" fx:id="entryTypeField"/>
+        <Label text="Add Entry Value"></Label>
+        <TextField text="Find Name" fx:id="entryValueField"/>
+
+
+    </VBox>
+    <VBox>
+        <Button layoutX="104.0" layoutY="81.0" text="Add User"
+                onAction="#onButtonUserAddClicked"/>
+        <Button layoutX="104.0" layoutY="81.0" text="Find user"
+                onAction="#onButtonFindUser"/>
+        <Button layoutX="104.0" layoutY="81.0" text="Add contact information"
+                onAction="#onButtonAddEntry"/>
+        <Button layoutX="104.0" layoutY="81.0" text="Create address book"
+                onAction="#onButtonAddressBookCreated"/>
+        <Button layoutX="104.0" layoutY="81.0" text="Load Book from the File" onAction="#onButtonLoadFile"/>
+        <Button  layoutX="104.0" layoutY="81.0" text="Save Book in the File" onAction="#onButtonSaveFiles"/>
+
+    </VBox>
+
+
+</GridPane>
